@@ -1,11 +1,16 @@
 import React , {Component} from 'react';
 import './index.scss'
-import {connect} from 'react-redux';
 class Favorite extends Component {
 
+    constructor(props){
+        super(props);
+        this.state= {
+            savedJokes:['test']
+        }
+    }
+
     render(){
-        console.log(this.props.Jokes)
-        const jokes = this.props.savedJokes.map(elem => (
+        const jokes = this.state.savedJokes.map(elem => (
             <li className="favorite__list__item"><p>{elem}</p></li>
         ))
         return(
@@ -20,11 +25,5 @@ class Favorite extends Component {
     }
 }
 
-const mapStateToProps = state =>{
-    console.log('state', state)
-    return {
-        savedJokes : state.Jokes
-    } 
-}
 
-export default connect(mapStateToProps) (Favorite);
+export default Favorite;
