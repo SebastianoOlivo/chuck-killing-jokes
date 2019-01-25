@@ -1,0 +1,112 @@
+@import './assets/scss/typography.scss';
+
+.header{
+  position: relative;
+  background-image: url(https://wallpaperplay.com/walls/full/7/9/7/231471.jpg);
+  background-attachment: fixed;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center top;
+}
+
+.site-title{
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:100%;
+  padding: 0;
+  text-align: center;
+  max-width: 1200px;
+  transform: translate(-50%, -50%);
+  &:before, &:after{
+    content: "Chuck's killing jokes";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index:-1;
+  }
+  &:before{
+    top: 4px;
+    left:4px;
+    color: rgb(255, 241, 160);
+
+  }
+  &:after{
+    top: 8px;
+    left:8px;
+    color: #f1c40f;
+    z-index: -2;
+
+  }
+}
+
+.footer{
+  background-color:#f1c40f ;
+  color:#fff ;
+  padding: 10px;
+  &-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .chuck-logo{
+    display: block;
+    width: 30px;
+    margin: 5px;
+
+  }
+  .chuck-link{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+  }
+}
+.page{
+  overflow: hidden;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 150px auto;
+
+}
+.card{
+  background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% -20px);
+    max-width: 580px;
+    text-align: center;
+    overflow: hidden;
+    margin:10px;
+    
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  .cta:not(:last-child){
+    margin-right:1em;
+  }
+}
+.cta{
+  background-color: #f1c40f;
+  padding: 1em 2.5em;
+  color: #FFF;
+  outline: none;
+  border-radius: 5px;
+  border:none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  &:hover{
+      background-color: darken(#f1c40f, 5%); 
+  }
+}

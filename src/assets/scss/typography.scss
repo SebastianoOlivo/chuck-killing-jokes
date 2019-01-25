@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.site-title{
+    font-family: $display-font;
+    font-size: 82px;
+    color: #FFF;
+}
+
+.card-tile{
+    font-family: $display-font;
+    font-size: 22px;
+}
+
+body{
+  font-family: $main-font;
+  font-size: 16px;
+
+}
