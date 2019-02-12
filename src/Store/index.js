@@ -1,6 +1,5 @@
 import {createStore} from 'redux';
 import combineReducers from '../Reducers/index'
-import jokeReducers from '../Reducers/index'
 
 
 export const store = createStore(
