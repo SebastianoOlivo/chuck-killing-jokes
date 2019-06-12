@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project allowing my students to practice redux & testing 
+
+## Banches :
+
+* master branche contain solution 
+* training contains only the boilerplate that allows students to practice
+* develop is used to improve the exercise 
 
 ## Available Scripts
 

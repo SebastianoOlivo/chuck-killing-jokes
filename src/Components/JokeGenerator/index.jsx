@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import './index.scss'
 import chuck from '../../assets/images/chuck.png'
+import { bindActionCreators } from 'redux';
+import {saveJokeAction} from '../../Actions/index'
 
 class JokeGenerator extends Component{
     constructor(props){
@@ -25,6 +28,10 @@ class JokeGenerator extends Component{
 
     }
 
+    saveJoke(){
+        this.props.saveJokeAction(this.state.joke)
+    }
+
     render(){
         return(
                 <div className="joke-generator card">
@@ -32,15 +39,15 @@ class JokeGenerator extends Component{
                     <p className="joke-generator__content">{this.state.joke}</p>
                     <div className="btn-container">
                         <button  className="joke-generator__button cta" onClick={() => this.getAJoke()} >C'mon !</button>
-                        <button  className="joke-generator__button cta" >save it !</button>
+                        <button  className="joke-generator__button cta" onClick={() => this.saveJoke()} >save it !</button>
                     </div>
                 </div>
         )
     }
 }
 
+const mapDispatchToProps = (dispatch) => bindActionCreators({saveJokeAction}, dispatch)
 
 
-export default JokeGenerator;
 
-
+export default connect(null, mapDispatchToProps)(JokeGenerator);
