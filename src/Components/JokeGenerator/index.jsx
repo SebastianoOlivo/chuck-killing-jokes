@@ -46,9 +46,8 @@ class JokeGenerator extends Component{
     }
 }
 
-const mapDispatchToProps = (dispatch) => (
-    return bindActionCreators({saveJokeAction}, dispatch)
-)
+const mapDispatchToProps = (dispatch) => bindActionCreators({saveJokeAction}, dispatch)
+
 
 
 export default connect(null, mapDispatchToProps)(JokeGenerator);
