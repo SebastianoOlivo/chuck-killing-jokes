@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import './index.scss'
 import chuck from '../../assets/images/chuck.png'
 
